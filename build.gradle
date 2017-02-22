@@ -31,7 +31,7 @@ ext {
 
     //dependencies
     supportLibraryVersion = '24.2.0'
-    daggerVersion = '2.7'
+    daggerVersion = '2.8'
 
     rxAndroidVersion = '2.0.1'
     rxJavaVersion = '2.0.1'

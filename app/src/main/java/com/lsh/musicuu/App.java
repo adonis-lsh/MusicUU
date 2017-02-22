@@ -2,6 +2,11 @@ package com.lsh.musicuu;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.lsh.musicuu.di.components.AppComponent;
+import com.lsh.musicuu.di.components.DaggerAppComponent;
+import com.lsh.musicuu.di.modules.AppModule;
+
 /**
  * Created by "小灰灰"
  * on 21/2/2017 17:18
@@ -10,4 +15,21 @@ import android.app.Application;
 
 public class App extends Application {
 
+    private AppComponent mAppComponent;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        mAppComponent = DaggerAppComponent.builder()
+                .appModule(new AppModule(this))
+                .build();
+
+        mAppComponent.inject(this);
+
+        Fresco.initialize(this);
+    }
+
+    public AppComponent getAppComponent() {
+        return mAppComponent;
+    }
 }
