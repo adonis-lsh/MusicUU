@@ -3,6 +3,8 @@ package com.lsh.musicuu.di.modules;
 import android.app.Application;
 import android.content.Context;
 
+import com.lsh.musicuu.di.scopes.ApplicationContext;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -21,6 +23,7 @@ public class AppModule {
 
 
     @Provides
+    @ApplicationContext
     public Context provideContext() {
         return mApplication;
     }

@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
@@ -21,4 +20,26 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    //SDK & Tool
+    compileSdkVersion = 24
+    buildToolsVersion = '24.0.3'
+    minSdkVersion = 15
+    targetSdkVersion = 24
+
+    //dependencies
+    supportLibraryVersion = '24.2.0'
+    daggerVersion = '2.7'
+
+    rxAndroidVersion = '2.0.1'
+    rxJavaVersion = '2.0.1'
+    rxlifecycleVersion = '2.0.1'
+
+    converterGsonVersion = '2.1.0'
+    rxjava2AdapterVersion = '1.0.0'
+    okhttpVersion = '3.4.1'
+    loggingInterceptorVersion = '3.4.1'
+    frescoVersion = '1.1.0'
 }
