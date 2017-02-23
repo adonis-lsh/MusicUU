@@ -10,6 +10,13 @@
 2. 在project的gradle中我们这样写![](http://img.blog.csdn.net/20170222110057058?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 3. 然后再app的gradle中我们就可以引用工程里面的版本号,并且这还有一个好处就是,在我们项目中引入其他库的时候,我们可以很方便的统一版本![](http://img.blog.csdn.net/20170222110209989?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 4. 需要注意的是,dependencies这里面引用的内容需要用""双引号
+5. 有可能出现的问题:![](http://img.blog.csdn.net/20170223113225950?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+</br>
+	解决方法如下:![](http://img.blog.csdn.net/20170223113922553?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+</br>
+	上面是一比较正规的解决方案,我直接把他们给注释了,因为我不经常用单元测试,出问题的话我就直接debug调试
+#搭框架
+1. 先来一个框架图:说明数据的流向
 
 ### License
 ```
