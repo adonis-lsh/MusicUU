@@ -18,5 +18,6 @@ public interface LoginContract {
 
     interface IView extends IBaseView {
         void registerUser();
+        void showToast();
     }
 }

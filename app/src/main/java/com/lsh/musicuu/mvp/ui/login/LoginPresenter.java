@@ -31,7 +31,6 @@ public class LoginPresenter<V extends LoginContract.IView> extends BasePresenter
 
     @Override
     public void doRegisterUser(User user) {
-        Log.e("111111111", user.name.get());
         getDataManager().register(user.name.get(), user.passWord.get())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -44,6 +43,10 @@ public class LoginPresenter<V extends LoginContract.IView> extends BasePresenter
                     @Override
                     public void onNext(RegisterBean value) {
                         Log.e("111111111", value.data.toString());
+                        V view = getView();
+
+
+                        getView().showToast();
                     }
 
                     @Override
