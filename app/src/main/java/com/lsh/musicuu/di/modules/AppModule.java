@@ -6,10 +6,17 @@ import android.content.Context;
 import com.lsh.musicuu.di.scopes.ApplicationContext;
 import com.lsh.musicuu.mvp.data.AppDataManager;
 import com.lsh.musicuu.mvp.data.DataManager;
+import com.lsh.musicuu.mvp.data.db.DbHelper;
+import com.lsh.musicuu.mvp.data.db.IDbHelper;
+import com.lsh.musicuu.mvp.data.file.FileHelper;
+import com.lsh.musicuu.mvp.data.file.IFileHelper;
+import com.lsh.musicuu.mvp.data.net.ApiHelper;
+import com.lsh.musicuu.mvp.data.net.IApiHelper;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * Created by "小灰灰"
@@ -36,13 +43,28 @@ public class AppModule {
         return mApplication;
     }
 
+
     @Provides
-    public CompositeDisposable provideCompositeDisposable() {
-        return new CompositeDisposable();
+    @Singleton
+    public DataManager provideDataManager(AppDataManager appDataManager) {
+        return appDataManager;
     }
 
     @Provides
-    public DataManager provideDataManager(AppDataManager appDataManager) {
-        return appDataManager;
+    @Singleton
+    public IDbHelper provideIDbHelper(DbHelper dbHelper) {
+        return dbHelper;
+    }
+
+    @Provides
+    @Singleton
+    public IFileHelper provideIFileHelper(FileHelper fileHelper) {
+        return fileHelper;
+    }
+
+    @Singleton
+    @Provides
+    public IApiHelper provideIApiHelper(ApiHelper apiHelper) {
+        return apiHelper;
     }
 }

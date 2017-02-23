@@ -1,6 +1,7 @@
 package com.lsh.musicuu.di.modules;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import com.lsh.musicuu.BuildConfig;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import dagger.Provides;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -27,6 +29,7 @@ public class ClientModule {
         return builder.baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(baseUrl)
+                .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
@@ -38,6 +41,11 @@ public class ClientModule {
             for (Interceptor interceptor : interceptors) {
                 builder.addInterceptor(interceptor);
             }
+        }
+        if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            builder.addInterceptor(loggingInterceptor);
         }
         return builder.build();
     }

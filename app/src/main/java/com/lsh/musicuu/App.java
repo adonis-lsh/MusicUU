@@ -6,6 +6,9 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.lsh.musicuu.di.components.AppComponent;
 import com.lsh.musicuu.di.components.DaggerAppComponent;
 import com.lsh.musicuu.di.modules.AppModule;
+import com.lsh.musicuu.mvp.data.DataManager;
+
+import javax.inject.Inject;
 
 /**
  * Created by "小灰灰"
@@ -14,6 +17,9 @@ import com.lsh.musicuu.di.modules.AppModule;
  */
 
 public class App extends Application {
+
+    @Inject
+    DataManager mDataManager;
 
     private AppComponent mAppComponent;
 

@@ -26,6 +26,14 @@ public class RegisterBean {
 
         public String ResultCode;
         public String ResultMsg;
+
+        @Override
+        public String toString() {
+            return "ResultBean{" +
+                    "ResultCode='" + ResultCode + '\'' +
+                    ", ResultMsg='" + ResultMsg + '\'' +
+                    '}';
+        }
     }
 
     public static class DataBean {
@@ -36,5 +44,22 @@ public class RegisterBean {
 
         public String Uid;
         public String NickName;
+
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "Uid='" + Uid + '\'' +
+                    ", NickName='" + NickName + '\'' +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "RegisterBean{" +
+                "Took=" + Took +
+                ", result=" + result +
+                ", data=" + data +
+                '}';
     }
 }

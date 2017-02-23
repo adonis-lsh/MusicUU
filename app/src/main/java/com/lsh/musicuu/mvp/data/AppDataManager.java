@@ -12,7 +12,6 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import io.reactivex.Observable;
-import retrofit2.Retrofit;
 import retrofit2.http.Query;
 
 /**
@@ -24,15 +23,13 @@ import retrofit2.http.Query;
 @Singleton
 public class AppDataManager implements DataManager {
     private final Context mContext;
-    private Retrofit mRetrofit;
     private final IDbHelper mIDbHelper;
     private final IFileHelper mIFileHelper;
     private final IApiHelper mIApiHelper;
 
     @Inject
-    public AppDataManager(@ApplicationContext Context context, Retrofit retrofit,IDbHelper IDbHelper, IFileHelper IFileHelper, IApiHelper IApiHelper) {
+    public AppDataManager(@ApplicationContext Context context, IDbHelper IDbHelper, IFileHelper IFileHelper, IApiHelper IApiHelper) {
         mContext = context;
-        mRetrofit = retrofit;
         mIDbHelper = IDbHelper;
         mIFileHelper = IFileHelper;
         mIApiHelper = IApiHelper;

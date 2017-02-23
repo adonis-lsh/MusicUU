@@ -9,6 +9,7 @@ import com.lsh.musicuu.mvp.ui.login.LoginPresenter;
 
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.disposables.CompositeDisposable;
 
 /**
  * Created by "小灰灰"
@@ -24,13 +25,11 @@ public class ActivityModule {
     }
 
     @Provides
-    @PerActivity
     public Context provideContext() {
         return mActivity;
     }
 
     @Provides
-    @PerActivity
     public Activity provideActivity() {
         return mActivity;
     }
@@ -40,6 +39,11 @@ public class ActivityModule {
     public LoginContract.ILoginPresenter<LoginContract.IView> provideLoginPresenter(LoginPresenter<LoginContract
             .IView> loginPresenter) {
         return loginPresenter;
+    }
+
+    @Provides
+    CompositeDisposable provideCompositeDisposable() {
+        return new CompositeDisposable();
     }
 
 }

@@ -1,5 +1,7 @@
 package com.lsh.musicuu.mvp.data.db;
 
+import javax.inject.Inject;
+
 /**
  * Created by "小灰灰"
  * on 22/2/2017 16:36
@@ -7,4 +9,7 @@ package com.lsh.musicuu.mvp.data.db;
  */
 
 public class DbHelper implements IDbHelper {
+    @Inject
+    public DbHelper() {
+    }
 }

@@ -8,6 +8,7 @@ import com.lsh.musicuu.di.modules.AppModule;
 import com.lsh.musicuu.di.modules.ClientModule;
 import com.lsh.musicuu.di.modules.GlobeParameterModule;
 import com.lsh.musicuu.di.scopes.ApplicationContext;
+import com.lsh.musicuu.mvp.data.DataManager;
 
 import javax.inject.Singleton;
 
@@ -29,4 +30,6 @@ public interface AppComponent {
     Context context();
 
     Application application();
+
+    DataManager getDataManger();
 }
