@@ -9,10 +9,9 @@ import com.lsh.musicuu.mvp.data.net.model.User;
 
 import javax.inject.Inject;
 
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -31,33 +30,20 @@ public class LoginPresenter<V extends LoginContract.IView> extends BasePresenter
 
     @Override
     public void doRegisterUser(User user) {
-        getDataManager().register(user.name.get(), user.passWord.get())
+        getCompositeDisposable().add(getDataManager().
+                register(user.name.get(), user.passWord.get())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<RegisterBean>() {
+                .subscribe(new Consumer<RegisterBean>() {
                     @Override
-                    public void onSubscribe(Disposable d) {
-
-                    }
-
-                    @Override
-                    public void onNext(RegisterBean value) {
-                        Log.e("111111111", value.data.toString());
-                        V view = getView();
-
-
+                    public void accept(RegisterBean registerBean) throws Exception {
                         getView().showToast();
                     }
-
+                }, new Consumer<Throwable>() {
                     @Override
-                    public void onError(Throwable e) {
+                    public void accept(Throwable throwable) throws Exception {
                         Log.e("111111111", "哈哈哈哈哈哈");
                     }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
+                }));
     }
 }

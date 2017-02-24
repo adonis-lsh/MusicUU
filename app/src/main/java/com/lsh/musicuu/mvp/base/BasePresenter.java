@@ -31,7 +31,10 @@ public class BasePresenter<T extends IBaseView> implements IBasePresenter<T> {
 
     @Override
     public void deAttach() {
-
+        getCompositeDisposable().clear();
+        if (mView != null) {
+            mView = null;
+        }
     }
 
     public T getView() {
