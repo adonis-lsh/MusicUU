@@ -15,7 +15,8 @@
 	解决方法如下:![](http://img.blog.csdn.net/20170223113922553?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 </br>
 	上面是一比较正规的解决方案,我直接把他们给注释了,因为我不经常用单元测试,出问题的话我就直接debug调试
-#搭框架
+
+##搭框架
 1. 先来一个框架图:说明数据的流向![](http://img.blog.csdn.net/20170224101642925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 2. UML类图展示:![](http://img.blog.csdn.net/20170224141003201?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ### License
