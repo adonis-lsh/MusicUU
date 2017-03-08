@@ -24,6 +24,13 @@
 1. 先来一个框架图:说明数据的流向![](http://img.blog.csdn.net/20170224101642925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 2. UML类图展示:![](http://img.blog.csdn.net/20170224141003201?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMDQwNzIyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
+
+##建包
+![](http://i.imgur.com/zSGYaZC.png)
+
+##联系我
+<span>![](http://i.imgur.com/zEidnpl.jpg) ![](http://i.imgur.com/GzExRBx.jpg)</span>
+
 ### License
 ```
    Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
