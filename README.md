@@ -29,7 +29,7 @@
 ![](http://i.imgur.com/zSGYaZC.png)
 
 ##联系我
-<span>![](http://i.imgur.com/zEidnpl.jpg) ![](http://i.imgur.com/GzExRBx.jpg)</span>
+![](http://p1.bqimg.com/567571/3cc855762ffbfd5a.jpg)
 
 ### License
 ```
