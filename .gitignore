@@ -7,3 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+/.idea/
+.idea/compiler.xml
+.idea/copyright/
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules/
+.idea/runConfigurations.xml
