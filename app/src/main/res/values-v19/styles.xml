@@ -1,0 +1,16 @@
+ <!--Base application theme. -->
+<!--<style name="AppTheme" parent="">-->
+<!--&lt;!&ndash; Customize your theme here. &ndash;&gt;
+<item name="colorPrimary">@color/colorPrimary</item>-->
+<!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--<item name="colorAccent">@color/colorAccent</item>-->
+<!--</style>-->
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>
+

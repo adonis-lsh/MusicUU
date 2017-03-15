@@ -42,4 +42,6 @@ ext {
     okhttpVersion = '3.4.1'
     loggingInterceptorVersion = '3.4.1'
     frescoVersion = '1.1.0'
+
+    autolayoutVersion = '1.4.5'
 }
