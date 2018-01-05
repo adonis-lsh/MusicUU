@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -7,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.lsh.musicuu"
         minSdkVersion 15
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -21,32 +20,33 @@ android {
     dataBinding {
         enabled true
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-
     //Dagger2
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
     compile "com.google.dagger:dagger:$rootProject.daggerVersion"
-
     //RxJava RxLife
     compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
     compile "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
     compile "com.trello.rxlifecycle2:rxlifecycle:$rootProject.rxlifecycleVersion"
     compile "com.trello.rxlifecycle2:rxlifecycle-android:$rootProject.rxlifecycleVersion"
     compile "com.trello.rxlifecycle2:rxlifecycle-components:$rootProject.rxlifecycleVersion"
-
     //retrofit2.0
     compile "com.squareup.retrofit2:converter-gson:$rootProject.converterGsonVersion"
     compile "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rootProject.rxjava2AdapterVersion"
     compile "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
     compile "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptorVersion"
-
     //fresco
     compile "com.facebook.fresco:fresco:$rootProject.frescoVersion"
 
-    //适配
-    compile "com.zhy:autolayout:$rootProject.autolayoutVersion"
+    // LeanCloud
+    compile ("cn.leancloud.android:avoscloud-sdk:$rootProject.avoscloudVersion")
+    compile ("cn.leancloud.android:avoscloud-statistics:$rootProject.avoscloudVersion")
 }

@@ -7,4 +7,6 @@ package com.lsh.musicuu.tool;
  */
 
 public interface AppConstants {
+    String AVOSCloudAppId = "PX3ggBt3kPJ69PI3OPdIhw3f-gzGzoHsz";
+    String AVOSCloudClientKey = "2vT11hUCtCRFPsV4n7CDxjuk";
 }

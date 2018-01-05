@@ -2,12 +2,12 @@ package com.lsh.musicuu.mvp.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 
 import com.lsh.musicuu.App;
 import com.lsh.musicuu.di.components.ActivityComponent;
 import com.lsh.musicuu.di.components.DaggerActivityComponent;
 import com.lsh.musicuu.di.modules.ActivityModule;
-import com.zhy.autolayout.AutoLayoutActivity;
 
 /**
  * Created by "小灰灰"
@@ -15,7 +15,7 @@ import com.zhy.autolayout.AutoLayoutActivity;
  * 邮箱：www.adonis_lsh.com
  */
 
-public abstract class BaseActivity extends AutoLayoutActivity implements IBaseView{
+public abstract class BaseActivity extends AppCompatActivity implements IBaseView{
 
     private ActivityComponent mActivityComponent;
 

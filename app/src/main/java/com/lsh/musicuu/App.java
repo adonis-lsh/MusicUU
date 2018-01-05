@@ -2,11 +2,14 @@ package com.lsh.musicuu;
 
 import android.app.Application;
 
+import com.avos.avoscloud.AVAnalytics;
+import com.avos.avoscloud.AVOSCloud;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.lsh.musicuu.di.components.AppComponent;
 import com.lsh.musicuu.di.components.DaggerAppComponent;
 import com.lsh.musicuu.di.modules.AppModule;
 import com.lsh.musicuu.mvp.data.DataManager;
+import com.lsh.musicuu.tool.AppConstants;
 
 import javax.inject.Inject;
 
@@ -33,6 +36,14 @@ public class App extends Application {
         mAppComponent.inject(this);
 
         Fresco.initialize(this);
+        //初始化后端云
+        initAVOSCloud();
+    }
+
+    private void initAVOSCloud() {
+        AVOSCloud.initialize(this, AppConstants.AVOSCloudAppId, AppConstants.AVOSCloudClientKey);
+        AVOSCloud.setDebugLogEnabled(true);
+        AVAnalytics.enableCrashReport(this, true);
     }
 
     public AppComponent getAppComponent() {
